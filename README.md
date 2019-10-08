@@ -27,12 +27,16 @@ arSoundex('عبدالله') // => x74600
 
 ## Example
 ```javascript
-arSoundex('عبدلله') // => x74600
+// Detecting misspelling
 arSoundex('عبدالله') // => x74600
+arSoundex('عبدلله') // => x74600
 
-arSoundex('ضربوه', 6, 1) // => x26700
-arSoundex('ضرب', 6, 1) // => x26700
+// Detecting ثxtra characters
 ```
+<p>arSoundex('<span dir="rtl">ضربوه</span>', 6, 1) // => x26700</p>
+<p>arSoundex('<span dir="rtl">ضرب</span>', 6, 1) // => x26700</p>
+
+
 ## License
 [MIT ©](https://github.com/SupervisionT/arSoundex/blob/master/LICENSE)
 
