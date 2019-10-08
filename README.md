@@ -10,11 +10,11 @@ We developed an algorithm based on Tajweed rules that categorize the characters 
 The second algorithm inspired from [this source](https://www.codeproject.com/Articles/26880/Arabic-Soundex)
 
 ## Install
-```
+```javascript
 npm install metaphone
 ```
 ## API
-```
+```javascript
 var arSoundex = require('ar-soundex');
 arSoundex('عبدالله') // => x74600
 ```
@@ -26,7 +26,7 @@ arSoundex('عبدالله') // => x74600
 | method | Number | To set which algorithm to be used [1 or 2] |    1 |
 
 ## Example
-```
+```javascript
 arSoundex('عبدلله') // => x74600
 arSoundex('عبدالله') // => x74600
 

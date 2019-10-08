@@ -1,6 +1,6 @@
 {
   "name": "ar-soundex",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate soundex index for Arabic words.",
   "main": "bundle/ar-soundex.js",
   "scripts": {
@@ -23,5 +23,9 @@
     "email": "a.alshaikh82@gmail.com",
     "url": "https://github.com/SupervisionT/arSoundex"
   },
+  "homepage": "https://github.com/SupervisionT/arSoundex",
+  "repository": "SupervisionT/arSoundex",
+  "issues": "https://github.com/SupervisionT/arSoundex/issues",
+
   "license": "MIT"
 }
