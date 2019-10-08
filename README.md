@@ -11,7 +11,7 @@ The second algorithm inspired from [this source](https://www.codeproject.com/Art
 
 ## Install
 ```javascript
-npm install metaphone
+npm i ar-soundex
 ```
 ## API
 ```javascript
