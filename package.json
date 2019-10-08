@@ -1,0 +1,27 @@
+{
+  "name": "ar-soundex",
+  "version": "1.0.0",
+  "description": "Generate soundex index for Arabic words.",
+  "main": "bundle/ar-soundex.js",
+  "scripts": {
+    "start": "node ar-soundex.js",
+    "build": "rollup src/main.js --file bundle/ar-soundex.js --format umd --name 'arSoundex'",
+    "test": "test/index.js"
+  },
+  "keywords": [
+    "soundex",
+    "metaphone",
+    "double",
+    "metaphone",
+    "arabic",
+    "index",
+    "search",
+    "spelling"
+  ],
+  "author": {
+    "name": "Abdallah Ali",
+    "email": "a.alshaikh82@gmail.com",
+    "url": "https://github.com/SupervisionT/arSoundex"
+  },
+  "license": "MIT"
+}
