@@ -2,11 +2,10 @@
   "name": "ar-soundex",
   "version": "1.0.2",
   "description": "Generate soundex index for Arabic words.",
-  "main": "bundle/ar-soundex.js",
+  "main": "bundle/index.js",
   "scripts": {
-    "start": "node ar-soundex.js",
-    "build": "rollup src/main.js --file bundle/ar-soundex.js --format umd --name 'arSoundex'",
-    "test": "test/index.js"
+    "build": "rollup src/index.js --file bundle/index.js --format umd --name 'arSoundex'",
+    "test": "xo ./src && ava"
   },
   "keywords": [
     "soundex",
@@ -26,6 +25,28 @@
   "homepage": "https://github.com/SupervisionT/arSoundex",
   "repository": "SupervisionT/arSoundex",
   "issues": "https://github.com/SupervisionT/arSoundex/issues",
-
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "ava": "^2.4.0",
+    "esm": "^3.2.25",
+    "prettier": "^1.18.2",
+    "rollup": "^1.23.1",
+    "xo": "^0.25.3"
+  },
+  "ava": {
+    "require": [
+      "esm"
+    ]
+  },
+  "xo": {
+    "space": true,
+    "prettier": false
+  },
+  "prettier": {
+    "trailingComma": "es5",
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "bracketSpacing": false
+  }
 }
