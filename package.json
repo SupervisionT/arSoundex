@@ -3,8 +3,9 @@
   "version": "1.0.2",
   "description": "Generate soundex index for Arabic words.",
   "main": "bundle/index.js",
+  "module": "bundle/index.esm.js",
   "scripts": {
-    "build": "rollup src/index.js --file bundle/index.js --format umd --name 'arSoundex'",
+    "build": "rollup -c",
     "test": "xo ./src && ava"
   },
   "keywords": [
@@ -31,6 +32,7 @@
     "esm": "^3.2.25",
     "prettier": "^1.18.2",
     "rollup": "^1.23.1",
+    "rollup-plugin-terser": "^5.1.2",
     "xo": "^0.25.3"
   },
   "ava": {
