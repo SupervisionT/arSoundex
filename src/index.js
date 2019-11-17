@@ -27,7 +27,7 @@ const arSoundex = (word = '', length = 6, method = 1) => {
   // Make sure the word is at least two characters in length
   if (size > 1) {
     // Check if last letter == ة and replance it with ه if so
-    word.replace(/ة$/, 'ه');
+    word.replace(/ة/g, 'ه');
     
     // Convert the word to character array for faster processing
     let chars = word.split('');
