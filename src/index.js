@@ -26,6 +26,9 @@ const arSoundex = (word = '', length = 6, method = 1) => {
   const size = word.length;
   // Make sure the word is at least two characters in length
   if (size > 1) {
+    // Check if last letter == ة and replance it with ه if so
+    word.replace(/ة$/, 'ه');
+    
     // Convert the word to character array for faster processing
     let chars = word.split('');
     chars = chars.length >= length ? chars : chars.slice(0, length);
@@ -35,10 +38,6 @@ const arSoundex = (word = '', length = 6, method = 1) => {
     // The current and previous character codes
     let currCode = 0;
 
-    // Check if last letter == ة and replance it with ه if so
-    if (chars[chars.length - 1] === 'ة') {
-      chars[chars.length - 1] = 'ه';
-    }
 
     // Get the first Arabic charachter and map it to it's En equivelent then remove it from the chars array
     const char0 = ar2EnMap[chars[0]];
