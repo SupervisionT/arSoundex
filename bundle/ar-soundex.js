@@ -28,7 +28,7 @@
             'ز': 3,
             'س': 3,
             'ت': 4,
-            'ة': 4,
+            'ة': 0,
             'ط': 4,
             'د': 4,
             'ث':5,
@@ -67,7 +67,7 @@
         'ك': 2,
         'ت': 3,
         'ث': 3,
-        'ة': 3,
+        'ة': 0,
         'د': 3,
         'ذ': 3,
         'ض': 3,
@@ -76,6 +76,45 @@
         'م': 5,
         'ن': 5,
         'ر': 6
+    };
+
+    const map = {
+        'ء': 'A',
+        'ؤ': 'A',
+        'ئ': 'A',
+        'أ': 'A',
+        'إ': 'A',
+        'ا': 'A',
+        'آ': 'A',
+        'ى': 'A',
+        'ب': 'B',
+        'ت': 'T',
+        'ة': 'T',
+        'ث': 'T',
+        'ج': 'J',
+        'ح': 'H',
+        'خ': 'K',
+        'د': 'D',
+        'ذ': 'Z',
+        'ر': 'R',
+        'ز': 'Z',
+        'س': 'S',
+        'ش': 'S',
+        'ص': 'S',
+        'ض': 'D',
+        'ط': 'T',
+        'ظ': 'Z',
+        'ع': 'A',
+        'غ': 'G',
+        'ف': 'F',
+        'ق': 'Q',
+        'ك': 'K',
+        'ل': 'L',
+        'م': 'M',
+        'ن': 'N',
+        'ه': 'H',
+        'و': 'W',
+        'ي': 'Y'
     };
 
     const arSoundex = (word='', length=6, method=1) => 
@@ -102,7 +141,9 @@
 
             // The current and previous character codes
             let currCode = 0;
+            let char0 = map[chars[0]];
             // Loop through all the characters and convert them to the proper character code
+            chars.shift();
             buffer = chars.reduce((a, e) => {
                 currCode = soundex[e];
                 (currCode === undefined) ? a :
@@ -110,8 +151,9 @@
                 (currCode === 0) ? a :
                 a.push(currCode);
                 return a
-            }, ['x']);
+            }, []);
 
+            buffer = [char0].concat(buffer);
             const bufferSize = buffer.length;
             if (bufferSize < length)
             buffer = buffer.concat(Array(length - bufferSize).fill(0));

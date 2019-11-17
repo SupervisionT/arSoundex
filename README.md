@@ -13,6 +13,11 @@ The second algorithm inspired from [this source](https://www.codeproject.com/Art
 ```javascript
 npm i ar-soundex
 ```
+## Build
+Make sure that you have [rollup installed](https://rollupjs.org/guide/en/) on your machine then run the following command
+```javascript
+npm run build
+```
 ## API
 ```javascript
 var arSoundex = require('ar-soundex');
