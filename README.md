@@ -1,3 +1,6 @@
+# What's New in version 1.0.4
+We found that the package provide a weak performance where many words may have the same hash. To improve the performance we replaced the fixed prefix 'x' into a maped version of the first letter. Tests show a remarkable improvement in the performance and the results as well. Moreover, we treated both ة and ه at the end of the word as a ه in both cases.
+
 # arSoundex
 
 There are many libraries that generate soundex index for English but non for Arabic. <br />
@@ -14,7 +17,12 @@ The second algorithm inspired from [this source](https://www.codeproject.com/Art
 npm i ar-soundex
 ```
 ## Build
-Make sure that you have [rollup installed](https://rollupjs.org/guide/en/) on your machine then run the following command
+Make sure that you have installed devDependencies or run:
+```javascript
+npm i
+```
+If you have trouble installing rollup you may check it's documentation [rollup installed](https://rollupjs.org/guide/en/)<br />
+To build the package on your machine run the following command
 ```javascript
 npm run build
 ```
